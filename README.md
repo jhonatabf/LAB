@@ -8,6 +8,9 @@ O BO (Business Operation) grava no formato XML apenas por ilustração. Em uma i
 2. Acesse o ambiente em [localhost:9092/csp/sys/utilhome.csp](http://localhost:9092/csp/sys/utilhome.csp)
 3. No primeiro acesso utilize as credenciais padrão: _SYSTEM/SYS
 
+## Caso a produção não start sozinha
+Abra o ambiente manualmente acessando a produção no NameSpace "IRISSHIFT" em ```Abrir``` Selecione a produção ```SFT.src.Producao.production```
+
 ## Requisição via REST
 ```POST /shift/api/exams```
 ```basic auth: _SYSTEM/SYS```
