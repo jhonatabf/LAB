@@ -10,7 +10,7 @@ O BO (Business Operation) grava no formato XML apenas por ilustração. Em uma i
 
 ## Requisição via REST
 ```POST /shift/api/exams```
-```basic auth: _SYSTEM/SYS
+```basic auth: _SYSTEM/SYS```
 ```json
 {
     "Identificador": "String",
