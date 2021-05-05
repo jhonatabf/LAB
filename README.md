@@ -12,7 +12,7 @@ O BO (Business Operation) grava no formato XML apenas por ilustração. Em uma i
 Abra o ambiente manualmente acessando a produção no NameSpace "IRISSHIFT" em ```Abrir``` Selecione a produção ```SFT.src.Producao.production```
 
 ## Requisição via REST
-```POST /shift/api/exams```
+```POST /sft/api/exams```
 ```basic auth: _SYSTEM/SYS```
 ```json
 {
