@@ -17,12 +17,12 @@
  write "Web application "_webName_" has been created!",! 
 
  write "Creating web application ...",!
- set webName = "/explorer"
+ set webName = "/sft/api"
  set webProperties("NameSpace") = "irisshift"
  set webProperties("Enabled") = 1
  set webProperties("CSPZENEnabled") = 1
  set webProperties("AutheEnabled") = 64
- Set webProperties("DispatchClass")="Explorer.Import.BS.Request"
+ Set webProperties("DispatchClass")="SFT.src.BS.request"
  Set webProperties("MatchRoles")=":%DB_irisshift"
  set sc = ##class(Security.Applications).Create(webName, .webProperties)
  write "Web application "_webName_" has been created!",! 
