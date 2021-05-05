@@ -5,7 +5,7 @@ Class SFT.src.BP.Process.process Extends Ens.BusinessProcessBPL
 /// BPL Definition
 XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 {
-<process language='objectscript' request='SFT.src.Msg.request' response='FT.src.Msg.response' height='2000' width='2000' >
+<process language='objectscript' request='SFT.src.Msg.request' response='SFT.src.Msg.response' height='2000' width='2000' >
 <context>
 <property name='ctxIdentificador' type='%String' instantiate='0' >
 <parameters>
