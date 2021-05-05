@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  iris:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 9091:1972
+      - 9092:52773
+#    volumes:
+#      - "iris-data:/durable"
+    env_file:
+      - '.env'
+
+#volumes:
+#  iris-data:

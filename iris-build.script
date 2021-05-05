@@ -1,0 +1,30 @@
+ do $SYSTEM.OBJ.Load("/opt/irisshift/Installer.cls", "ck")
+ set sc = ##class(App.Installer).Setup()
+
+ zn "irisshift"
+ do $System.OBJ.LoadDir("/opt/irisshift/src","ck",,1)
+ do ##class(Ens.Director).SetAutoStart("Explorer.Import.Production",1)
+ ;zpm "install sslclient"
+
+ zn "%SYS"
+ Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+ write "Enabling iKnow on default web application ...",!
+ set webName = "/csp/irisshift"
+ set webProperties0("iKnowEnabled") = 1
+ set webProperties0("DeepSeeEnabled") = 1
+ set sc = ##class(Security.Applications).Modify(webName, .webProperties0)
+ write "Web application "_webName_" has been created!",! 
+
+ write "Creating web application ...",!
+ set webName = "/explorer"
+ set webProperties("NameSpace") = "irisshift"
+ set webProperties("Enabled") = 1
+ set webProperties("CSPZENEnabled") = 1
+ set webProperties("AutheEnabled") = 64
+ Set webProperties("DispatchClass")="Explorer.Import.BS.Request"
+ Set webProperties("MatchRoles")=":%DB_irisshift"
+ set sc = ##class(Security.Applications).Create(webName, .webProperties)
+ write "Web application "_webName_" has been created!",! 
+
+halt
